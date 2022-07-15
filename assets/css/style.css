@@ -36,11 +36,13 @@ textarea {
 .time-block {
   text-align: center;
   border-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 
 }
 
 .row {
-  /* white-space: pre-wrap; */
+  white-space: nowrap;
   height: 80px;
   display: flex;
   border-top: 1px solid white;
@@ -52,6 +54,7 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+
 }
 
 .past {
