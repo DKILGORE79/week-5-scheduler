@@ -8,11 +8,12 @@ function displayTime() {
 setInterval(displayTime, 1000);
 // --------------------------------------------------------------------------------------------------------
 
-
-// saving to localStorage event
+// saving to localStorage event - office hours help 
 $(document).ready(function () {
     // saveBtn click listener 
-    $(".saveBtn").on("click", function () {
+    $(".saveBtn").on("click", function (event) {
+
+        event.preventDefault();
         // Get nearby values of the description - SIBLING?
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
@@ -22,7 +23,7 @@ $(document).ready(function () {
     })
     // ---------------------------------------------------------------------------------------------------------
     function timeTracker() {
-        //get current number of hours.
+        //get current number of hours. https://stackoverflow.com/questions/62462599/how-can-i-change-elements-style-based-on-the-time-of-day
         var timeNow = moment().hour();
 
         // loop over time blocks
@@ -49,7 +50,7 @@ $(document).ready(function () {
         })
     }
     // --------------------------------------------------------------------------------------------------------------
-    // Get item from local storage
+    // Get item from local storage - https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem
     $("#hour8 .description").val(localStorage.getItem("hour8"));
     $("#hour9 .description").val(localStorage.getItem("hour9"));
     $("#hour10 .description").val(localStorage.getItem("hour10"));

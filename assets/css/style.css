@@ -29,33 +29,37 @@ textarea {
   border-bottom: 10px solid black;
 }
 
-.description {
-  white-space: pre-wrap;
-}
-
-.time-block {
-  text-align: center;
-  border-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-
-}
-
 .row {
   white-space: nowrap;
   height: 80px;
   display: flex;
   border-top: 1px solid white;
 
+}
+
+.time-block {
+  justify-self: center;
+
+  border-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 
 }
 
 .hour {
+
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
 
 }
+
+.description {
+  white-space: pre-wrap;
+}
+
+
+
 
 .past {
   background-color: #d3d3d3;
